@@ -8,34 +8,29 @@ import {
 
 const faqs = [
   {
-    question: "What AI models do you support?",
+    question: "Apa keuntungan menggunakan landing page dibandingkan website biasa?",
     answer:
-      "We support a wide range of state-of-the-art AI models including GPT-4, Claude, Llama, and custom fine-tuned models. Our platform is model-agnostic and continuously updated with the latest releases.",
+      "Landing page dirancang untuk fokus pada konversi dan interaksi dengan pengunjung. Dengan desain yang sederhana dan jelas, landing page dapat meningkatkan peluang pengunjung untuk melakukan tindakan yang diinginkan, seperti menghubungi bisnis atau melakukan pembelian.",
   },
   {
-    question: "How is pricing calculated?",
+    question: "Apakah domain sudah termasuk dalam paket?",
     answer:
-      "Pricing is based on the number of API requests and the complexity of the AI models used. We offer transparent, pay-as-you-go pricing with no hidden fees. You can upgrade or downgrade your plan at any time.",
+      "Domain tidak termasuk dalam paket. Anda dapat menggunakan domain yang sudah ada atau memilih domain yang kami sediakan.",
   },
   {
-    question: "Is my data secure?",
+    question: "Seberapa banyak revisi yang diperbolehkan?",
     answer:
-      "Absolutely. We use bank-level encryption (AES-256) for data at rest and in transit. We're SOC 2 Type II certified and compliant with GDPR, HIPAA, and other major data protection regulations. Your data is never used to train models without explicit consent.",
+      "Revisi terbatas pada 2 kali untuk paket UMKM Sederhana dan 3 kali untuk paket UMKM Profesional. Untuk paket UMKM Kustom, jumlah revisi dapat disesuaikan dengan kebutuhan.",
   },
   {
-    question: "Can I use this for commercial projects?",
+    question: "Seberapa lama landing page dapat diakses setelah selesai dibuat?",
     answer:
-      "Yes! All our plans, including the free tier, can be used for commercial projects. We encourage you to build and ship products using our platform. Enterprise plans offer additional features for large-scale deployments.",
+      "Landing page akan tetap dapat diakses selama domain dan hosting aktif. Kami menyediakan dukungan teknis untuk memastikan landing page tetap berjalan dengan baik.",
   },
   {
-    question: "What kind of support do you offer?",
+    question: "Apakah ada dukungan teknis setelah landing page selesai dibuat?",
     answer:
-      "Free plans include community support and comprehensive documentation. Pro plans get priority email support with 24-hour response times. Enterprise customers receive 24/7 dedicated support with a dedicated account manager and custom SLAs.",
-  },
-  {
-    question: "Do you offer a free trial?",
-    answer:
-      "Yes! We offer a generous free tier that includes 1,000 API requests per month. Pro and Enterprise plans come with a 14-day free trial with no credit card required. You can cancel anytime.",
+      "Ya, kami menyediakan dukungan teknis untuk membantu Anda mengelola dan memperbarui landing page sesuai kebutuhan. Dukungan ini termasuk pemeliharaan, pembaruan konten, dan bantuan teknis lainnya.",
   },
 ];
 
@@ -51,9 +46,9 @@ export function FAQ() {
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-5xl font-bold"
           >
-            Frequently asked{" "}
+            Pertanyaan Sering{" "}
             <span className="bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
-              questions
+              Ditanyakan
             </span>
           </motion.h2>
           <motion.p
@@ -61,9 +56,9 @@ export function FAQ() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-lg text-muted-foreground max-w-2xl mx-auto"
+            className="text-lg text-muted-foreground max-w-2xl mx-auto font-inter"
           >
-            Everything you need to know about our platform
+            Semua pertanyaan yang sering ditanyakan oleh UMKM telah kami rangkum di sini. Jika ada pertanyaan lain, jangan ragu untuk menghubungi kami.
           </motion.p>
         </div>
 
@@ -80,7 +75,7 @@ export function FAQ() {
                 <AccordionTrigger className="text-left">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
+                <AccordionContent className="text-muted-foreground font-inter">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

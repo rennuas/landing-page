@@ -1,55 +1,23 @@
 import { motion } from "framer-motion";
-import {
-  Brain,
-  Zap,
-  Shield,
-  Code,
-  Globe,
-  Sparkles,
-} from "lucide-react";
 
 const features = [
   {
-    icon: Brain,
-    title: "Advanced AI Models",
+    title: "Copywriting Buruk",
     description:
-      "Access state-of-the-art language models and neural networks for your applications.",
+      "Kata-kata bertele-tele dan tidak menjual. Calon pembeli bingung, ujung-ujungnya pergi tanpa membeli.",
     gradient: "from-purple-500 to-pink-500",
   },
   {
-    icon: Zap,
-    title: "Lightning Fast",
+    title: "Tampilan Berantakan",
     description:
-      "Optimized infrastructure ensures your AI queries are processed in milliseconds.",
+      "Desain tidak profesional dan kacau di layar HP. Warna tidak serasi bikin calon pembeli langsung kabur.",
     gradient: "from-yellow-500 to-orange-500",
   },
   {
-    icon: Shield,
-    title: "Enterprise Security",
+    title: "Website lemot",
     description:
-      "Bank-level encryption and compliance with SOC 2, GDPR, and HIPAA standards.",
-    gradient: "from-green-500 to-emerald-500",
-  },
-  {
-    icon: Code,
-    title: "Developer First",
-    description:
-      "Clean APIs, comprehensive docs, and SDKs in your favorite programming languages.",
-    gradient: "from-blue-500 to-cyan-500",
-  },
-  {
-    icon: Globe,
-    title: "Global Scale",
-    description:
-      "Deploy worldwide with edge locations across 6 continents for minimal latency.",
-    gradient: "from-indigo-500 to-purple-500",
-  },
-  {
-    icon: Sparkles,
-    title: "Auto-Optimization",
-    description:
-      "Smart caching and model selection automatically optimize for cost and performance.",
-    gradient: "from-pink-500 to-rose-500",
+      "Belum sempat lihat produkmu, loading lebih dari 3 detik bisa bikin 53% pembeli pergi.",
+    gradient: "from-green-500 to-teal-500",
   },
 ];
 
@@ -70,7 +38,7 @@ const item = {
 
 export function Features() {
   return (
-    <section id="features" className="py-20 md:py-32">
+    <section id="challenges" className="py-20 md:py-32">
       <div className="container mx-auto px-4">
         <div className="text-center space-y-4 mb-16">
           <motion.h2
@@ -80,9 +48,9 @@ export function Features() {
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-5xl font-bold"
           >
-            Everything you need to{" "}
+            Berapa Banyak {" "}
             <span className="bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
-              build with AI
+              Pembeli Kabur Hari Ini?
             </span>
           </motion.h2>
           <motion.p
@@ -90,9 +58,11 @@ export function Features() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-lg text-muted-foreground max-w-2xl mx-auto"
+            className="text-lg text-muted-foreground max-w-2xl mx-auto font-inter"
           >
-            Powerful features designed to help you ship AI-powered products faster
+            Bukan produkmu yang kurang bagus. Yang bikin mereka ragu adalah
+            kesan pertama sebelum sempat mencoba — dan kesan itu sekarang
+            terjadi di layar HP, bukan di depan toko.
           </motion.p>
         </div>
 
@@ -104,7 +74,7 @@ export function Features() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {features.map((feature, index) => {
-            const Icon = feature.icon;
+            const number = String(index + 1).padStart(2, "0");
             return (
               <motion.div
                 key={index}
@@ -112,12 +82,14 @@ export function Features() {
                 className="group relative p-6 rounded-2xl border bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
                 <div
-                  className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${feature.gradient} mb-4`}
+                  className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-br ${feature.gradient} mb-4`}
                 >
-                  <Icon className="h-6 w-6 text-white" />
+                  <span className="text-xs font-bold tracking-widest uppercase text-white tabular-nums">
+                    Masalah {number}
+                  </span>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
+                <p className="text-muted-foreground font-inter">{feature.description}</p>
               </motion.div>
             );
           })}

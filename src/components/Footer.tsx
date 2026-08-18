@@ -16,14 +16,13 @@ export function Footer() {
                 <Sparkles className="h-5 w-5 text-white" />
               </div>
               <span className="font-bold text-xl bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
-                GenAI
+                BangunId
               </span>
             </div>
             <p className="text-sm text-muted-foreground">
-              Build the future with AI-powered solutions. Fast, secure, and
-              scalable.
+              Membantu UMKM dalam membangun presence digital mereka.
             </p>
-            <div className="flex gap-3">
+            {/* <div className="flex gap-3">
               <a
                 href="https://github.com"
                 target="_blank"
@@ -48,7 +47,7 @@ export function Footer() {
               >
                 <Linkedin className="h-5 w-5" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Product */}
@@ -77,14 +76,6 @@ export function Footer() {
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
                   FAQ
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  API Reference
                 </a>
               </li>
             </ul>

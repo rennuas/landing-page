@@ -1,19 +1,18 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X, Sparkles, Rocket } from "lucide-react";
 import { withBase } from "@/lib/utils";
+import { ShimmerButton } from "@/components/ShimmerButton";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "Features", href: withBase("/#features") },
-    { label: "Pricing", href: withBase("/#pricing") },
-    { label: "Components", href: withBase("/components") },
-    { label: "Dashboard", href: withBase("/dashboard") },
-    { label: "Changelog", href: withBase("/changelog") },
-    { label: "Contact", href: withBase("/contact") },
+    { label: "Portofolio", href: withBase("/#Portfolio") },
+    { label: "Order", href: withBase("/#order-steps") },
+    { label: "Harga", href: withBase("/#pricing") },
+    { label: "Testimoni", href: withBase("/#testimonials") },
   ];
 
   return (
@@ -22,10 +21,10 @@ export function Header() {
         {/* Logo */}
         <a href={withBase("/")} className="flex items-center space-x-2">
           <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500">
-            <Sparkles className="h-5 w-5 text-white" />
+            <Rocket className="h-5 w-5 text-white" />
           </div>
           <span className="font-bold text-xl bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
-            GenAI
+            BangunId
           </span>
         </a>
 
@@ -45,9 +44,9 @@ export function Header() {
         {/* Actions */}
         <div className="flex items-center space-x-4">
           <ThemeToggle />
-          <Button className="hidden md:inline-flex">
-            Get Started
-          </Button>
+          <a href="https://wa.me/6285156286627" target="_blank" rel="noopener noreferrer">
+            <ShimmerButton className="hidden md:block">Konsultasi</ShimmerButton>
+          </a>
 
           {/* Mobile Menu Button */}
           <button
@@ -78,7 +77,9 @@ export function Header() {
                 {item.label}
               </a>
             ))}
-            <Button className="w-full">Get Started</Button>
+            <a href="https://wa.me/6285156286627" target="_blank" rel="noopener noreferrer">
+              <ShimmerButton className="hidden md:block">Konsultasi</ShimmerButton>
+            </a>
           </div>
         </div>
       )}

@@ -3,34 +3,34 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Chen",
-    role: "CTO at TechCorp",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
+    name: "Aad Kurniadi",
+    role: "Queen Foods 88",
+    image: "",
     content:
-      "This platform transformed how we integrate AI into our products. The API is incredibly easy to use and the performance is outstanding.",
+      "Landing page yang dibuat sangat cepat dan sesuai dengan kebutuhan bisnis saya. Hasilnya memuaskan dan meningkatkan penjualan.",
     rating: 5,
   },
   {
-    name: "Marcus Rodriguez",
-    role: "Founder at StartupXYZ",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Marcus",
+    name: "Fariz Muhammad",
+    role: "Founder at Insta Inhil",
+    image: "",
     content:
-      "We've tried several AI platforms, but this one stands out for its reliability and developer experience. Highly recommended!",
+      "Saya sangat puas dengan layanan ini. Landing page yang dibuat sangat profesional dan membantu bisnis saya lebih dikenal oleh pelanggan.",
     rating: 5,
   },
   {
-    name: "Emily Watson",
-    role: "Product Manager at InnovateLabs",
-    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Emily",
+    name: "Fengkie Junis",
+    role: "Founder at Fiverse",
+    image: "",
     content:
-      "The support team is fantastic and the documentation is comprehensive. We were able to integrate AI features in days, not weeks.",
+      "Tim ini sangat responsif dan kreatif. Landing page yang dibuat sesuai dengan visi bisnis saya dan membantu meningkatkan interaksi dengan pelanggan.",
     rating: 5,
   },
 ];
 
 export function Testimonials() {
   return (
-    <section className="py-20 md:py-32 bg-muted/30">
+    <section id="testimonials" className="py-20 md:py-32 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center space-y-4 mb-16">
           <motion.h2
@@ -40,9 +40,9 @@ export function Testimonials() {
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-5xl font-bold"
           >
-            Loved by{" "}
+            Dicintai oleh{" "}
             <span className="bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
-              developers
+              UMKM
             </span>
           </motion.h2>
           <motion.p
@@ -52,7 +52,7 @@ export function Testimonials() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            See what our customers are saying about us
+            Lihat apa kata mereka yang sudah merasakan manfaat landing page dari kami. Dari UMKM lokal hingga bisnis yang ingin tampil beda, semua puas dengan hasilnya.
           </motion.p>
         </div>
 
@@ -78,11 +78,11 @@ export function Testimonials() {
                 "{testimonial.content}"
               </p>
               <div className="flex items-center gap-3">
-                <img
+                {/* <img
                   src={testimonial.image}
                   alt={testimonial.name}
                   className="h-12 w-12 rounded-full"
-                />
+                /> */}
                 <div>
                   <p className="font-semibold">{testimonial.name}</p>
                   <p className="text-sm text-muted-foreground">

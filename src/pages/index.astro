@@ -1,16 +1,18 @@
 ---
 import Layout from '../layouts/main.astro';
-import { Hero } from '@/components/Hero';
+import HeroSection from '@/components/HeroSection';
 import { Features } from '@/components/Features';
+import { OrderSteps } from '@/components/OrderSteps';
 import { Pricing } from '@/components/Pricing';
 import { Testimonials } from '@/components/Testimonials';
 import { FAQ } from '@/components/FAQ';
 ---
 
 <Layout>
-	<Hero client:load />
+	<HeroSection client:load />
 	<Features client:load />
-	<Testimonials client:load />
+	<OrderSteps client:load />
 	<Pricing client:load />
+	<Testimonials client:load />
 	<FAQ client:load />
 </Layout>

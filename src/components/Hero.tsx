@@ -1,6 +1,18 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Zap, Brain } from "lucide-react";
+import { MarqueeLogos } from "@/components/MarqueeLogos";
+
+const clientLogos = [
+  { name: "Queen Foods 88", url: "https://queenfoods88.com/images/logo.png" },
+  { name: "Client 2", url: "https://incremental.sh/assets/images/client/klien-1.png" },
+  { name: "Client 3", url: "https://incremental.sh/assets/images/client/klien-2.png" },
+  { name: "Client 4", url: "https://incremental.sh/assets/images/client/klien-3.png" },
+  { name: "Client 5", url: "https://incremental.sh/assets/images/client/klien-4.png" },
+  { name: "Client 6", url: "https://incremental.sh/assets/images/client/klien-5.png" },
+  { name: "Client 7", url: "https://incremental.sh/assets/images/client/klien-6.png" },
+  { name: "Client 8", url: "https://incremental.sh/assets/images/client/klien-7.png" },
+];
 
 export function Hero() {
   return (
@@ -22,7 +34,7 @@ export function Hero() {
           >
             <div className="inline-flex items-center gap-2 rounded-full border bg-background/60 backdrop-blur-sm px-4 py-1.5 text-sm">
               <Sparkles className="h-4 w-4 text-purple-500" />
-              <span className="text-muted-foreground">Powered by AI</span>
+              <span className="text-muted-foreground">Landing Page UMKM Indonesia</span>
             </div>
           </motion.div>
 
@@ -33,9 +45,9 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight max-w-4xl"
           >
-            Build the Future with{" "}
+            Konversi Iklan menjadi {" "}
             <span className="bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 dark:from-purple-400 dark:via-pink-400 dark:to-blue-400 bg-clip-text text-transparent animate-gradient">
-              GenAI
+              Penjualan
             </span>
           </motion.h1>
 
@@ -46,9 +58,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl"
           >
-            Harness the power of artificial intelligence to transform your ideas
-            into reality. Fast, secure, and scalable AI solutions for modern
-            businesses.
+            Tingkatkan bisnis UMKM Anda dengan landing page profesional yang dirancang untuk menarik pelanggan dan meningkatkan konversi.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -59,11 +69,11 @@ export function Hero() {
             className="flex flex-col sm:flex-row gap-4"
           >
             <Button size="lg" className="group">
-              Get Started Free
+              Order Sekarang
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button size="lg" variant="outline">
-              View Demo
+              Lihat Harga
             </Button>
           </motion.div>
 
@@ -76,24 +86,21 @@ export function Hero() {
           >
             <div className="flex flex-col items-center">
               <div className="flex items-center gap-1 text-2xl md:text-3xl font-bold">
-                <Zap className="h-6 w-6 text-yellow-500" />
-                <span>99.9%</span>
+                <span>150+</span>
               </div>
-              <p className="text-sm text-muted-foreground">Uptime</p>
+              <p className="text-sm text-muted-foreground">UMKM sudah punya etalase digital</p>
             </div>
             <div className="flex flex-col items-center">
               <div className="flex items-center gap-1 text-2xl md:text-3xl font-bold">
-                <Brain className="h-6 w-6 text-purple-500" />
-                <span>10M+</span>
+                <span>2 hari</span>
               </div>
-              <p className="text-sm text-muted-foreground">AI Requests</p>
+              <p className="text-sm text-muted-foreground">rata-rata waktu pengerjaan</p>
             </div>
             <div className="flex flex-col items-center">
               <div className="flex items-center gap-1 text-2xl md:text-3xl font-bold">
-                <Sparkles className="h-6 w-6 text-pink-500" />
-                <span>50K+</span>
+                <span>4.9/5</span>
               </div>
-              <p className="text-sm text-muted-foreground">Users</p>
+              <p className="text-sm text-muted-foreground">rating kepuasan klien</p>
             </div>
           </motion.div>
         </div>
