@@ -1,5 +1,4 @@
-import { Sparkles, Github, Twitter, Linkedin, Mail } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Mail, Instagram, MapPin, Phone } from "lucide-react";
 import { withBase } from "@/lib/utils";
 
 export function Footer() {
@@ -12,42 +11,18 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500">
-                <Sparkles className="h-5 w-5 text-white" />
-              </div>
+              <img 
+                src={withBase("/logo.png")} 
+                alt="LamanPlus" 
+                className="h-16 w-13 rounded-lg object-contain"
+              />
               <span className="font-bold text-xl bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
-                BangunId
+                LamanPlus
               </span>
             </div>
             <p className="text-sm text-muted-foreground">
               Membantu UMKM dalam membangun presence digital mereka.
             </p>
-            {/* <div className="flex gap-3">
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <Github className="h-5 w-5" />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </div> */}
           </div>
 
           {/* Product */}
@@ -56,10 +31,10 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href={withBase("/#features")}
+                  href={withBase("/#order-steps")}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Features
+                  Cara Pemesanan
                 </a>
               </li>
               <li>
@@ -67,7 +42,7 @@ export function Footer() {
                   href={withBase("/#pricing")}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Pricing
+                  Harga
                 </a>
               </li>
               <li>
@@ -90,23 +65,7 @@ export function Footer() {
                   href={withBase("/about")}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href={withBase("/blog")}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Careers
+                  Tentang Kami
                 </a>
               </li>
               <li>
@@ -120,29 +79,53 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter */}
+          {/* Contact Info */}
           <div>
-            <h3 className="font-semibold mb-4">Stay Updated</h3>
-            <p className="text-sm text-muted-foreground mb-4">
-              Subscribe to our newsletter for the latest updates.
-            </p>
-            <div className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex h-9 w-full rounded-md border bg-background px-3 py-1 text-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-              />
-              <Button size="sm">
-                <Mail className="h-4 w-4" />
-              </Button>
-            </div>
+            <h3 className="font-semibold mb-4">Hubungi Kami</h3>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-2 text-sm text-muted-foreground">
+                <Mail className="h-4 w-4 mt-0.5 shrink-0" />
+                <a
+                  href="mailto:hello@lamanplus.web.id"
+                  className="hover:text-foreground transition-colors"
+                >
+                  hello@lamanplus.web.id
+                </a>
+              </li>
+              <li className="flex items-start gap-2 text-sm text-muted-foreground">
+                <Phone className="h-4 w-4 mt-0.5 shrink-0" />
+                <a
+                  href="https://wa.me/6285156286627"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-foreground transition-colors"
+                >
+                  +62 851-5628-6627
+                </a>
+              </li>
+              <li className="flex items-start gap-2 text-sm text-muted-foreground">
+                <Instagram className="h-4 w-4 mt-0.5 shrink-0" />
+                <a
+                  href="https://instagram.com/lamanplus"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-foreground transition-colors"
+                >
+                  @lamanplus
+                </a>
+              </li>
+              <li className="flex items-start gap-2 text-sm text-muted-foreground">
+                <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
+                <span>Batam, Kepulauan Riau, Indonesia</span>
+              </li>
+            </ul>
           </div>
         </div>
 
         {/* Bottom */}
         <div className="pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} GenAI. All rights reserved.
+            © {currentYear} LamanPlus. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a

@@ -152,11 +152,11 @@ export default function HeroSection(): JSX.Element {
               </ShimmerButton>
             </a>
             <a
-              href="#"
+              href="https://wa.me/6285156286627" target="_blank" rel="noopener noreferrer"
               className="hero-heading inline-flex items-center gap-2 font-bold text-sm px-6 py-3.5 rounded-full border-2 transition-colors text-dark border-dark dark:text-white dark:border-white"
             >
-              <Laptop size={16} />
-              Lihat Portofolio
+              <MessageCircle size={16} />
+              Konsultasi Gratis
             </a>
           </div>
 
