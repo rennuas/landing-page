@@ -7,7 +7,7 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://rennuas.github.io',
-  base: '/landing-page',
+  base: '/',
   integrations: [
     react(),
     tailwind({
